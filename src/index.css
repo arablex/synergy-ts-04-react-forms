@@ -1,0 +1,76 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1b2330;
+  --muted: #5d6879;
+  --accent: #3b6df0;
+  --error: #c62828;
+  --ok: #1b7f3b;
+  --border: #d5dbe7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+nav a { color: var(--accent); font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+main { padding: 32px 16px; }
+
+.card {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+h1 { margin: 0 0 20px; font-size: 24px; }
+
+.field { margin-bottom: 18px; }
+
+label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; }
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.srv-validation-message { margin-top: 6px; font-size: 13px; color: var(--error); }
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled { background: #aab4c8; cursor: not-allowed; }
+
+.success { margin: 16px 0 0; color: var(--ok); font-weight: 600; }
+.server-status { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
